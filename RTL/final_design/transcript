@@ -1,0 +1,192 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -voptargs="+acc" AES_encrypt 
+# Start time: 14:29:29 on Feb 03,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.AES_encrypt(fast)
+# Loading work.Key_Expansion(fast)
+# Loading work.AddRoundKey(fast)
+# Loading work.subByte(fast)
+# Loading work.sbox(fast)
+# Loading work.ShiftRows(fast)
+# Loading work.MixColumns(fast)
+add wave -position insertpoint  \
+sim:/AES_encrypt/plain_txt \
+sim:/AES_encrypt/key \
+sim:/AES_encrypt/cipher_txt
+force -freeze sim:/AES_encrypt/plain_txt 128'h00112233445566778899aabbccddeeff 0
+force -freeze sim:/AES_encrypt/key 128'h000102030405060708090a0b0c0d0e0f 0
+run
+run
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/AddRoundKey.v}
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:01:08 on Feb 03,2025
+# vlog -reportprogress 300 -work work D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/AddRoundKey.v 
+# -- Compiling module AddRoundKey
+# 
+# Top level modules:
+# 	AddRoundKey
+# End time: 18:01:08 on Feb 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/AES_decrypt.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/AES_encrypt.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/invSbox.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/invSubByte.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/KeyExpansion.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/MixColumns.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/sbox.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/ShiftRows.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/SubByte.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog -reportprogress 300 -work work {D:/ITI/Verilog/Final Project/AES--Verilog-main/final_design/SubByte_tb.v}
+# couldn't execute "C:\questasim64_2021.1\win64\vlog": no such file or directory
+vlog *.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:01:19 on Feb 03,2025
+# vlog -reportprogress 300 AES_decrypt.v AES_encrypt.v AddRoundKey.v KeyExpansion.v MixColumns.v ShiftRows.v SubByte.v SubByte_tb.v invSbox.v invSubByte.v sbox.v 
+# -- Compiling module AES_encrypt
+# -- Compiling module AddRoundKey
+# -- Compiling module Key_Expansion
+# -- Compiling module MixColumns
+# -- Compiling module ShiftRows
+# -- Compiling module subByte
+# -- Compiling module SubByte_tb
+# -- Compiling module invSbox
+# -- Compiling module invSubByte
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	AES_encrypt
+# 	SubByte_tb
+# 	invSubByte
+# End time: 18:01:19 on Feb 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.AES_encrypt(fast)
+# Loading work.Key_Expansion(fast)
+# Loading work.AddRoundKey(fast)
+# Loading work.subByte(fast)
+# Loading work.sbox(fast)
+# Loading work.ShiftRows(fast)
+# Loading work.MixColumns(fast)
+
+force -freeze sim:/AES_encrypt/plain_txt 128'h00112233445566778899aabbccddeeff 0
+force -freeze sim:/AES_encrypt/key 128'h000102030405060708090a0b0c0d0e0f 0
+run
+run
+run
+vlog *.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:06:22 on Feb 03,2025
+# vlog -reportprogress 300 AES_decrypt.v AES_encrypt.v AddRoundKey.v KeyExpansion.v MixColumns.v ShiftRows.v SubByte.v SubByte_tb.v invSbox.v invSubByte.v sbox.v 
+# -- Compiling module AES_encrypt
+# -- Compiling module AddRoundKey
+# -- Compiling module Key_Expansion
+# -- Compiling module MixColumns
+# -- Compiling module ShiftRows
+# -- Compiling module subByte
+# -- Compiling module SubByte_tb
+# -- Compiling module invSbox
+# -- Compiling module invSubByte
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	AES_encrypt
+# 	SubByte_tb
+# 	invSubByte
+# End time: 18:06:22 on Feb 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.AES_encrypt(fast)
+# Loading work.Key_Expansion(fast)
+# Loading work.AddRoundKey(fast)
+# Loading work.subByte(fast)
+# Loading work.sbox(fast)
+# Loading work.ShiftRows(fast)
+# Loading work.MixColumns(fast)
+force -freeze sim:/AES_encrypt/plain_txt 128'h00112233445566778899aabbccddeeff 0
+force -freeze sim:/AES_encrypt/key 128'h000102030405060708090a0b0c0d0e0f 0
+run
+run
+add wave -position insertpoint  \
+sim:/AES_encrypt/expanded_key \
+sim:/AES_encrypt/new_state \
+sim:/AES_encrypt/new_state_loop \
+sim:/AES_encrypt/sub_out \
+sim:/AES_encrypt/sub_out_final \
+sim:/AES_encrypt/shift_out \
+sim:/AES_encrypt/shift_out_final \
+sim:/AES_encrypt/mix_out
+vlog *.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:17:04 on Feb 03,2025
+# vlog -reportprogress 300 AES_decrypt.v AES_encrypt.v AddRoundKey.v KeyExpansion.v MixColumns.v ShiftRows.v SubByte.v SubByte_tb.v invSbox.v invSubByte.v sbox.v 
+# -- Compiling module AES_encrypt
+# -- Compiling module AddRoundKey
+# -- Compiling module Key_Expansion
+# -- Compiling module MixColumns
+# -- Compiling module ShiftRows
+# -- Compiling module subByte
+# -- Compiling module SubByte_tb
+# -- Compiling module invSbox
+# -- Compiling module invSubByte
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	AES_encrypt
+# 	SubByte_tb
+# 	invSubByte
+# End time: 18:17:04 on Feb 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.AES_encrypt(fast)
+# Loading work.Key_Expansion(fast)
+# Loading work.AddRoundKey(fast)
+# Loading work.subByte(fast)
+# Loading work.sbox(fast)
+# Loading work.ShiftRows(fast)
+# Loading work.MixColumns(fast)
+force -freeze sim:/AES_encrypt/plain_txt 128'h00112233445566778899aabbccddeeff 0
+force -freeze sim:/AES_encrypt/key 128'h000102030405060708090a0b0c0d0e0f 0
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.AES_encrypt(fast)
+# Loading work.Key_Expansion(fast)
+# Loading work.AddRoundKey(fast)
+# Loading work.subByte(fast)
+# Loading work.sbox(fast)
+# Loading work.ShiftRows(fast)
+# Loading work.MixColumns(fast)
+force -freeze sim:/AES_encrypt/plain_txt 128'h00112233445566778899aabbccddeeff 0
+force -freeze sim:/AES_encrypt/key 128'h000102030405060708090a0b0c0d0e0f 0
+run
+run
+run
