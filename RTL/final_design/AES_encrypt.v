@@ -1,13 +1,14 @@
 module AES_encrypt #(
-    parameter key_length = 128, Nk = 4, Nr = Nk+6
+    parameter key_length = 128
 ) (
-    input [0:127] plain_txt,
-    input [0:key_length-1] key, 
+    input  [0:127] plain_txt,
+    input  [0:key_length-1] key, 
     output [0:127] cipher_txt
 );
-
+parameter Nk = key_length / 32;
+parameter Nr = Nk + 6;
 wire [0 : (128 * (Nr + 1)) - 1] expanded_key;
-wire [0:127] round_states [0:Nr];
+wire [0:127] round_states [0:Nr-1];
 wire [0:127] sub_out_final, shift_out_final;
 
 Key_Expansion #(.Nk(Nk)) key_exp_inst (
