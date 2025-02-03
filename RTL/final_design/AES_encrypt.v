@@ -2,7 +2,7 @@ module AES_encrypt #(
     parameter key_length = 128, Nk = 4 , Nr = Nk+6
 ) (
     input [0:127] plain_txt,
-    input [key_length-1:0] key, 
+    input [0:key_length-1] key, 
     output [0:127] cipher_txt
 );
 
